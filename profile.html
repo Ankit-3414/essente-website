@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bloom Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f1f6;
+      padding: 2rem;
+      color: #4a3c5a;
+    }
+    .profile-box {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #8b5a7d;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #d4a5c3;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-box">
+    <h2>Your Bloom Profile</h2>
+    <p><strong>Scent Blend:</strong> <span id="scentBlend"></span></p>
+    <p><strong>Occasion:</strong> <span id="eventType"></span></p>
+    <p><strong>Mood:</strong> <span id="moodType"></span></p>
+    <a href="checkout.html" class="cta-btn">Proceed to Checkout</a>
+  </div>
+
+  <script>
+    document.getElementById('scentBlend').innerText = localStorage.getItem('flower') + ", Vanilla & Sandalwood";
+    document.getElementById('eventType').innerText = localStorage.getItem('event');
+    document.getElementById('moodType').innerText = localStorage.getItem('mood');
+  </script>
+  
+  <footer>
+    <p>&copy; 2025 ESSENTÉ | Personalized Perfumes</p>
+  </footer>
+</body>
+</html>

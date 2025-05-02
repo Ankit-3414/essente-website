@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Perfume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8fc;
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      color: #8b5a7d;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    select, input, textarea {
+      padding: 0.7rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .cta-btn {
+      background-color: #d4a5c3;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Create Your Perfume</h2>
+  <form id="quizForm">
+    <label>Favorite Flower:</label>
+    <select id="flower">
+      <option>Rose</option><option>Jasmine</option><option>Lavender</option><option>Mogra</option>
+    </select>
+
+    <label>Mood:</label>
+    <select id="mood">
+      <option>Romantic</option><option>Energetic</option><option>Calm</option><option>Confident</option>
+    </select>
+
+    <label>Event:</label>
+    <select id="event">
+      <option>Date Night</option><option>Parties</option><option>Daily Use</option><option>Meditation</option>
+    </select>
+
+    <button class="cta-btn" type="submit">See My Bloom Profile</button>
+  </form>
+
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      localStorage.setItem('flower', document.getElementById('flower').value);
+      localStorage.setItem('mood', document.getElementById('mood').value);
+      localStorage.setItem('event', document.getElementById('event').value);
+      window.location.href = "profile.html";
+    });
+  </script>
+  
+  <footer>
+    <p>&copy; 2025 ESSENTÉ | Personalized Perfumes</p>
+  </footer>
+</body>
+</html>

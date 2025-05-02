@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalize Your Essence – ESSENTÉ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h2 {
+      text-align: center;
+      color: #8b5a7d;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section#checkout {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    /* Aligning radio buttons and checkboxes in a straight line */
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-group input[type="radio"],
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .cta-btn {
+      background-color: #d4a5c3;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #b58997;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="checkout">
+    <h2>Finalize Your Essence</h2>
+    <form>
+      <label>Name Your Perfume:</label>
+      <input type="text" name="perfumeName" placeholder="E.g., Élan d’Amour" required>
+
+      <label>Select Bottle Size:</label>
+      <div class="checkbox-group">
+        <label><input type="radio" name="bottleSize" value="30ml" required> 30ml – ₹799</label>
+        <label><input type="radio" name="bottleSize" value="50ml"> 50ml – ₹1299</label>
+        <label><input type="radio" name="bottleSize" value="100ml"> 100ml – ₹1999</label>
+      </div>
+
+      <label>Personal Touch (Add-ons):</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="addons" value="Engraved Message"> Engraved Message (+₹149)</label>
+        <label><input type="checkbox" name="addons" value="Gift Wrap"> Premium Gift Wrap (+₹99)</label>
+        <label><input type="checkbox" name="addons" value="Personal Note"> Add a Personal Note</label>
+      </div>
+
+      <label>Shipping Address:</label>
+      <textarea rows="3" name="address" placeholder="Enter your complete address with pincode" required></textarea>
+
+      <label>Preferred Delivery Date:</label>
+      <input type="date" name="deliveryDate" required>
+
+      <label>Payment Method:</label>
+      <select name="payment" required>
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI</option>
+        <option value="card">Debit/Credit Card</option>
+      </select>
+
+      <a href="#home" class="cta-btn">Place Order</a>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ESSENTÉ | Personalized Perfumes</p>
+  </footer>
+</body>
+
+</html>
